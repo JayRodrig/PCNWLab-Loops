@@ -15,7 +15,7 @@ const average = arr => {
 
     let addingNumbers = 0
 
-    for(i = 0; i < copyArr.length; i++){
+    for(let i = 0; i < copyArr.length; i++){
         addingNumbers += copyArr[i] / copyArr.length;
     }
 
@@ -34,7 +34,7 @@ console.log(average([1, 2, 3, 4]));
 
 const squareEach = arr => {
     const copyArr = [...arr];
-    for(i = 0; i < copyArr.length; i++){
+    for(let i = 0; i < copyArr.length; i++){
         copyArr[i] **= 2;
     }
     return copyArr;
@@ -60,7 +60,7 @@ console.log(squareEach([1, 2, 3, 4]));
 const averageSquare = arr => {
     let sumTotal = 0
     const copyArr = [...arr];
-    for(i = 0; i < copyArr.length; i++){
+    for(let i = 0; i < copyArr.length; i++){
         copyArr[i] **= 2;
         sumTotal += copyArr[i] / copyArr.length;
     }
@@ -80,7 +80,7 @@ console.log(averageSquare([1,2,3,4]));
 
 const negateArr = arr => {
     const copyArr = [];
-    for(i = 0; i < arr.length; i++){
+    for(let i = 0; i < arr.length; i++){
         copyArr.push(Math.abs(arr[i]) * -1);
     }
     return copyArr;
@@ -95,6 +95,16 @@ console.log(negateArr([1, 2, 3, 4]));
     @desc - reverse an array
     @example - reverseArr([1,2,3,4]); // [4,3,2,1]
 */
+
+const reverseArr = arr => {
+    const copyArr = [];
+    for (let i = arr.length - 1; i >= 0; i--){
+        copyArr.push(arr[i]);
+    }
+    return copyArr;
+}
+
+console.log(reverseArr([1, 2, 3, 4]));
 
 /*
     @func negateBackwards
