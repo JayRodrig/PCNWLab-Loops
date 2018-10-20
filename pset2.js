@@ -8,7 +8,7 @@
 
 const removeNegatives = arr => {
     const copyArr = [];
-    for(i = 0; i < arr.length; i++){
+    for(let i = 0; i < arr.length; i++){
         copyArr.push(Math.abs(arr[i]));
     }
     return copyArr;
@@ -30,6 +30,20 @@ console.log('*******************************************************************
         findVal([1,2,3,4], 4); // 3
         findVal([1,2,3,4], 9); // -1
 */
+
+const findVal = (arr, val) => {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === val) {
+            return i;
+        }
+    }
+    return -1;   
+}
+
+console.log(findVal([1,2,3,4], 1));
+console.log(findVal([1,2,3,4], 4));
+console.log(findVal([1,2,3,4], 9));
+console.log('*********************************************************************')
 
 /*
     @func removeOdds
