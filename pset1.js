@@ -115,5 +115,7 @@ console.log(reverseArr([1, 2, 3, 4]));
         negateBackwards([1,2,3,4]); // [-4, -3, -2, -1]
 */
 
+const negateBackwards = arr => negateArr(reverseArr(arr));
 
-
+console.log('********************');
+console.log(negateBackwards([1,2,3,4]));
