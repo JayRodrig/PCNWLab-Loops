@@ -7,6 +7,23 @@
     @example - average([1,2,3,4]); // 2.5
 */
 
+const average = arr => {
+    const copyArr = [...arr];
+    if(Array.isArray(arr) === false){
+        throw Newerror('Invalid argument, need array');
+    } 
+
+    let addingNumbers = 0
+
+    for(i = 0; i < copyArr.length; i++){
+        addingNumbers += copyArr[i] / copyArr.length;
+    }
+
+    return addingNumbers;
+}
+
+console.log(average([1, 2, 3, 4]));
+
 /*
     @func squareEach
     @param {array} arr
@@ -14,6 +31,13 @@
     @desc - square each value in array
     @example - squareEach([1,2,3,4]); // [1,4,9,16]
 */
+
+const squareEach = arr => {
+
+}
+
+console.log(squareEach());
+
 
 /*
     @func averageSquare
