@@ -37,7 +37,7 @@ const findVal = (arr, val) => {
             return i;
         }
     }
-    return -1;   
+    return -1; //We put the return -1 condition outside because we don't want to stop our loop from iterating  
 }
 
 console.log(findVal([1,2,3,4], 1));
@@ -56,6 +56,19 @@ console.log('*******************************************************************
         removeOdds([1,2,3,4]); // [2,4]
         removeOdds([1,"2",3,4]); // [4]
 */
+
+const removeOdds = arr => {
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] % 2 === 0 && typeof arr[i] === 'number'){
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+
+console.log(removeOdds([1,2,3,4]));
+console.log(removeOdds([1,"2",3,4]));
 
 /*
     @func addSquares
