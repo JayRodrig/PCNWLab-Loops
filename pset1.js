@@ -57,6 +57,18 @@ console.log(squareEach([1, 2, 3, 4]));
         averageSquare([1,2,3,4); // 7.5
 */
 
+const averageSquare = arr => {
+    let sumTotal = 0
+    const copyArr = [...arr];
+    for(i = 0; i < copyArr.length; i++){
+        copyArr[i] **= 2;
+        sumTotal += copyArr[i] / copyArr.length;
+    }
+    return sumTotal;
+}
+
+console.log(averageSquare([1,2,3,4]));
+
 /*
     @func negateArr
     @param {array} arr
