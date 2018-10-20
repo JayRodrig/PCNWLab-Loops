@@ -33,10 +33,14 @@ console.log(average([1, 2, 3, 4]));
 */
 
 const squareEach = arr => {
-
+    const copyArr = [...arr];
+    for(i = 0; i < copyArr.length; i++){
+        copyArr[i] **= 2;
+    }
+    return copyArr;
 }
 
-console.log(squareEach());
+console.log(squareEach([1, 2, 3, 4]));
 
 
 /*
