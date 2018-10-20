@@ -69,6 +69,7 @@ const removeOdds = arr => {
 
 console.log(removeOdds([1,2,3,4]));
 console.log(removeOdds([1,"2",3,4]));
+console.log('*********************************************************************')
 
 /*
     @func addSquares
@@ -79,6 +80,17 @@ console.log(removeOdds([1,"2",3,4]));
         addSquares([1,2,3,4); // [1,2,3,4,1,4,9,16]
 */
 
+const addSquares = arr => {
+    let copyArr = [...arr];
+    for(let i= 0; i < arr.length; i++){
+        copyArr[i] **= 2;
+    }
+    return arr.concat(copyArr);
+}
+
+console.log(addSquares([1,2,3,4]));
+console.log('*********************************************************************')
+
 /*
     @func doubleify
     @param {array} arr
@@ -87,6 +99,18 @@ console.log(removeOdds([1,"2",3,4]));
     @example - doubleify([1,2,3,4); // [1,1,2,2,3,3,4,4]
 */
 
+
+const doubleify = arr => {
+    let copyArr = [];
+    for(let i = 0; i < arr.length; i++){
+        copyArr.push(arr[i]);
+        copyArr.push(arr[i]);
+    }
+    return copyArr;
+}
+
+console.log(doubleify([1,2,3,4] ));
+console.log('*********************************************************************')
 
 /*
     @func findMax
