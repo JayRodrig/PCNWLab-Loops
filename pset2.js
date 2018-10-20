@@ -6,6 +6,17 @@
     @example - removeNegatives([-3,-2,1,2,3,-4]); // [3,2,1,2,3,4]
 */
 
+const removeNegatives = arr => {
+    const copyArr = [];
+    for(i = 0; i < arr.length; i++){
+        copyArr.push(Math.abs(arr[i]));
+    }
+    return copyArr;
+}
+
+console.log(removeNegatives([-3,-2,1,2,3,-4]));
+console.log(removeNegatives([-10, -8, -9, -15]));
+console.log('*********************************************************************')
 /*
     @func findVal
     @param {array} arr
