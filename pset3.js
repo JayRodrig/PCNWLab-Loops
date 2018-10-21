@@ -9,6 +9,19 @@
                getMiddle([1,2,3,4]); // [2,3]
 */
 
+const getMiddle = arr => {
+    if(arr.length % 2 === 0){
+        return arr.slice(arr.length / 2 - 1, arr.length / 2 + 1);
+    } else return arr.slice(Math.floor(arr.length/2), Math.floor(arr.length/2 + 1));
+}
+
+console.log(getMiddle([1,2,3]));
+console.log(getMiddle([1,2,3, 4]));
+console.log(getMiddle([12,13,14]));
+console.log(getMiddle([12,13,14,15,16,17,18]));
+console.log(getMiddle([12,13,14,15,16,17,18,19]));
+console.log('***************************************************************')
+
 /*
     @func addToMiddle
     @param {array} arr
@@ -29,6 +42,19 @@
     @example - hasAtSymbol('taq@karim.com'); // true
                hasAtSymbol('foobar'); // false
 */
+
+const hasAtSymbol = email => {
+    for(let i = 0; i < email.length; i++){
+        if(email[i] === '@'){
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(hasAtSymbol('taq@karim.com'));
+console.log(hasAtSymbol('foobar'));
+console.log('***************************************************************')
 
 /*
     @func capitalize
