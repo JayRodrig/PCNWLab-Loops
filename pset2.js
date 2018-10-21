@@ -128,7 +128,7 @@ const findMax = arr => {
             largest = arr[i]
         }
     }
-    return largest;
+    retu rn largest;
 }
 
 console.log(findMax([1,2,3,99,4]));

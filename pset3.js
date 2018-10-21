@@ -76,6 +76,20 @@ console.log('***************************************************************')
                capitalize('Taq'); // 'Taq'
 */
 
+const capitalize = str => {
+    const arr = str.split('');
+    for(let i = 0; i < arr.length; i++){
+        if(i === 0){
+            arr[i] = arr[i].toUpperCase();
+        }
+    return arr.join('');
+    }
+}
+
+console.log(capitalize('taq'));
+console.log(capitalize('Taq'));
+console.log('***************************************************************')
+
 /*
     @func isAllUpperCased
     @param {string} str
@@ -86,6 +100,22 @@ console.log('***************************************************************')
              isAllUpperCased('tAq'); // false
 */
 
+const isAllUpperCased = str => {
+    if(typeof str !== 'string'){
+        return 'Invalid input'
+    }
+    for(let i = 0; i < str.length; i++){
+        if(str[i] !== str[i].toUpperCase()){
+            return false;
+        } 
+    }
+    return true;
+}
+
+console.log(isAllUpperCased('TAQ'))
+console.log(isAllUpperCased('tAq'))
+console.log('***************************************************************')
+
 /*
     @func capitalizeEachWord
     @param {string} str
@@ -95,6 +125,17 @@ console.log('***************************************************************')
     @example - capitalizeEachWord('the cow jumped over the fence')
                // 'The Cow Jumped Over The Fence'
 */
+
+// const capitalizeEachWord = str => {
+//     let arr = str.split(' ');
+//     let newArr = [...arr];
+//     for(let i = 0; i < arr.length; i++){
+//         newArr = arr[i][0].toUpperCase();
+//     }
+//     console.log(newArr);
+// }
+
+// console.log(capitalizeEachWord('the cow jumped over the fence'));
 
 /*
     @func capitalizeEachWordWithExceptions
@@ -120,7 +161,18 @@ console.log('***************************************************************')
         findAtMentions('@the_taqquikarim @someOtherGuy @etc this was a cool event @foobar')
         // ['the_taqquikarim', 'someOtherGuy', 'etc', 'foobar']
 */
+const findAtMentions = tweet => {
+    const arr = tweet.split(' ');
+    const newArr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i][0] === '@'){
+            newArr.push(arr[i].slice(1));
+        }
+    }
+    return newArr;
+}
 
+console.log(findAtMentions('@the_taqquikarim @someOtherGuy @etc this was a cool event @foobar'));
 /*
     @func roundToN
     @param {number} num
