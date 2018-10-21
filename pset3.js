@@ -34,6 +34,16 @@ console.log('***************************************************************')
                addToMiddle([1,2,3,4], 0); // [1,2,0,3,4]
 */
 
+const addToMiddle = (arr, element) => {
+    const firstHalfArr = arr.slice(0, Math.ceil(arr.length / 2));
+    const secondHalfArr = arr.slice(Math.ceil(arr.length / 2), arr.length);
+    return firstHalfArr.concat(element).concat(secondHalfArr);
+}
+
+console.log(addToMiddle([1,2,3], 0));
+console.log(addToMiddle([1,2,3,4], 0));
+console.log('***************************************************************')
+
 /*
     @func hasAtSymbol
     @param {string} email
